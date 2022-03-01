@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="card p-3" style="width: 70rem;">
+    <div class="card-body">
+        
+        <div class="d-flex justify-content-around m-3">
+            <!-- <img src="{{url_for('static',filename='source.jpg')}}" width="500px" /> -->
+            <!-- <img src="{{url_for('static',filename='result.jpg')}}" width="500px" /> -->
+            <video width = "500" height = "300" controls>
+                <source src = "{{url_for('static',filename='source.mp4')}}" type = "video/mp4">
+                This browser doesn't support video tag.
+             </video>
+             <video width = "500" height = "300" controls>
+                <source src = "{{url_for('static',filename='result.mp4')}}" type = "video/mp4">
+             </video>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <a href="{{ url_for('index') }}" class="btn btn-primary" style="width: 8rem">Back</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
